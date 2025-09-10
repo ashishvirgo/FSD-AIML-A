@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .header{
+           width: 100vw;
+            height: 10%; 
+            background-color: yellow;
+            text-align: center;
+
+        }
+        .menu{
+           width: 100vw;
+            height: 85%; 
+            background-color: beige; 
+            display: flex;          
+        }
+        .left{
+           width: 15%;
+           height: 100%; 
+            background-color: blueviolet;
+            
+        }
+        .right{
+           width: 85%;
+           height: 100%; 
+            background-color: greenyellow;
+            
+        }
+        .footer{
+           width: 100vw;
+           height: 5%; 
+            background-color: palevioletred;
+            text-align: center;
+        }
+       ul>li{list-style-type:none;}
+        *{margin: 0px;
+        box-sizing: border-box;
+    font-size: 1.5rem;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">ABESEC Ghaziabad</div>
+    <div class="menu">
+    <div class="left">
+        <ul>
+            <li><a href="register.html" target="fr1">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    <div class="right">
+        <iframe name="fr1" width="400px" height="400px"></iframe>
+    </div>
+    </div>
+    <div class="footer">&copy;2025 ABESEC Ghaziabad</div>
+    </div>
+</body>
+</html>
