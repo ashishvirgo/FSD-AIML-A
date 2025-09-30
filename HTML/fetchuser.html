@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+    <style>
+        table{background-color: yellow;
+            width:80%;
+            border: 1px solid green;
+        }
+        th,td{
+            padding: 5px;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>List of users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>IP</th>
+                <th>Mac Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+            const url="https://dummyjson.com/users?limit=30";         
+            const f1=async()=>{
+    try{
+    const res=await fetch(url);
+     const data= await res.json();
+     data.users.forEach((data1)=>{
+        const row=document.createElement("tr");
+        document.querySelector("tbody").appendChild(row);
+        const col=document.createElement("td");
+        col.innerText=data1.firstName;
+        row.appendChild(col);
+        const col1=document.createElement("td");
+        col1.innerText=data1.email;
+        row.appendChild(col1);
+        const col2=document.createElement("td");
+        col2.innerText=data1.ip;
+        row.appendChild(col2);
+        const col3=document.createElement("td");
+        col3.innerText=data1.macAddress;
+        row.appendChild(col3);
+        
+
+     })
+    }
+    catch(err){
+        console.error('Error',err.message);
+    }
+}
+f1();
+</script>
+        </tbody>
+    </table>
+</body>
+</html>
